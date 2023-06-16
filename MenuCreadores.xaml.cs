@@ -38,7 +38,7 @@ public partial class MenuCreadores : ContentPage
             {
                 Nombre = "David Zamora",
                 ImgName = "david.jpg",
-                Funcion = "Desarrolador de problemas"
+                Funcion = "Desarrollador de problemas"
             },
             new Creador
             {

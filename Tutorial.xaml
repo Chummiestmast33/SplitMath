@@ -5,10 +5,37 @@
              Title="Tutorial"
              Shell.NavBarIsVisible="False"
              BackgroundImageSource="fondo_aplicacion.jpeg">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+    <VerticalStackLayout
+        VerticalOptions="Center"
+        Padding="18"
+        Spacing="18">
+        <Button
+            Text="Regresar"
+            FontSize="20"
+            FontFamily="CaveatBrush-Regular.ttf"
+            HorizontalOptions="Start"
+            x:Name="BotonRegresar"
+            TextColor="{StaticResource White}"
+            BackgroundColor="{StaticResource Blue100Accent}"
+            Clicked="BotonRegresar_Clicked"/>
+        <Image
+            Source="nuevo_icono.jpg"
+            MaximumWidthRequest="200"
+            HeightRequest="375"
+            Aspect="AspectFit"
+            x:Name="ImagenRepresentacion"/>
+        <Label
+            Text="!Hola¡ Bienvenido a SplitMath, Un juego para contestar operaciones simples, con un sistema de opcion multiple. Somos LaCTeam y permitenos guiarte en como se juega este juego"
+            FontSize="25"
+            FontFamily="CaveatBrush-Regular.ttf"
+            TextColor="{StaticResource Black}"
+            x:Name="Descripcion"/>
+        <ImageButton
+            HorizontalOptions="End"
+            HeightRequest="60"
+            WidthRequest="60"
+            Source="boton_saltar"
+            x:Name="BotonSiguiente"
+            Clicked="BotonSiguiente_Clicked"/>
     </VerticalStackLayout>
 </ContentPage>

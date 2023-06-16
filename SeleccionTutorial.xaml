@@ -30,7 +30,8 @@
             BackgroundColor="#2AF718"
             x:Name="btnTutorial"
             BorderColor="{StaticResource negro}"
-            BorderWidth="4"/>
+            BorderWidth="4"
+            Clicked="ReproducirTutorial"/>
         <Button
             Text="Omitir tutorial"
             FontSize="40"
