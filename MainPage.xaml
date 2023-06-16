@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SliptMath.MainPage"
+             BackgroundImageSource="fondo_aplicacion.png"
+             Shell.NavBarIsVisible="False">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="negro">#000</Color>
+            <Color x:Key="aqua">#FF00FFFF</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+        <Label
+            Text="SPLITMATH"
+            FontFamily="CaveatBrush-Regular.ttf"
+            FontSize="80"
+            TextColor="{StaticResource negro}"
+            HorizontalTextAlignment="Center"
+            x:Name="Titulo"/>
+        <Image
+            Source="logotipodeapp.png"
+            WidthRequest="270"
+            x:Name="MainImage"/>
+        <Button
+            Text="Jugar"
+            FontFamily="IndieFlower-Regular.ttf"
+            FontSize="35"
+            TextColor="{StaticResource negro}"
+            BackgroundColor="#00000000"
+            BorderColor="{StaticResource  aqua}"
+            BorderWidth="5"
+            CornerRadius="50"
+            x:Name="btnJugar"
+            Clicked="IrMenuSeleccion"
+            WidthRequest="200"/>
+        <Button
+            Text="Puntuacion"
+            FontFamily="IndieFlower-Regular.ttf"
+            FontSize="25"
+            TextColor="{StaticResource negro}"
+            BackgroundColor="#00000000"
+            BorderColor="{StaticResource aqua}"
+            BorderWidth="5"
+            CornerRadius="50"
+            x:Name="btnPuntuacion"
+            WidthRequest="225"
+            Clicked="btnPuntuacion_Clicked"/>
+        <FlexLayout JustifyContent="SpaceBetween" Direction="Row" HeightRequest="50">
+            <ImageButton Source="bocinaactiva.png"
+                         WidthRequest="50"
+                         Clicked="CambiarReproduccionAudio"
+                         x:Name="btnSonido"/>
+            <ImageButton Source="creadoresicon.png"
+                         WidthRequest="50"
+                         x:Name="btnCreadores"
+                         Clicked="btnCreadores_Clicked"/>
+        </FlexLayout>
+
+    </VerticalStackLayout>
+
+</ContentPage>

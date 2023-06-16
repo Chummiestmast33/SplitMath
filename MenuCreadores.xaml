@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SliptMath.MenuCreadores"
+             Title="Creadores"
+             BackgroundImageSource="fondo_aplicacion.png"
+             Shell.NavBarIsVisible="False">
+    <VerticalStackLayout
+        VerticalOptions="Center"
+        Padding="25"
+        Spacing="20">
+        <CarouselView x:Name="CarouselCreadores" IndicatorView="IndicadorView">
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                        <Frame HasShadow="True"
+                       BorderColor="DarkGray"
+                       CornerRadius="5"
+                       Margin="20"
+                       HorizontalOptions="Center"
+                       VerticalOptions="CenterAndExpand">
+                            <StackLayout>
+                                <Label Text="{Binding Nombre}"
+                               FontAttributes="Bold"
+                               FontSize="30"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center"
+                                       TextColor="{StaticResource Black}"/>
+                                <Image Source="{Binding ImgName}"
+                               Aspect="AspectFill"
+                               HeightRequest="300"
+                               WidthRequest="300"
+                               HorizontalOptions="Center" />
+                                <Label Text="{Binding Funcion}"
+                               FontAttributes="Italic"
+                               HorizontalOptions="Center"
+                               MaxLines="5"
+                               FontSize="12"
+                               LineBreakMode="TailTruncation" 
+                                       TextColor="{StaticResource Black}"/>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+        <IndicatorView
+            x:Name="IndicadorView"
+            HorizontalOptions="Center"
+            IndicatorColor="{StaticResource Blue100Accent}"
+            SelectedIndicatorColor="{StaticResource Yellow100Accent}"/>
+        <FlexLayout Direction="Row" JustifyContent="SpaceBetween" HeightRequest="70">
+            <ImageButton
+                Source="bocinaactiva.png"
+                HeightRequest="70"
+                WidthRequest="70"
+                x:Name="BtnActivarMusica"
+                Clicked="BtnActivarMusica_Clicked"/>
+            <Button
+                Text="Regresar"
+                FontFamily="CaveatBrush-Regular.ttf"
+                FontSize="20"
+                TextColor="{StaticResource Black}"
+                BackgroundColor="{StaticResource Blue200Accent}"
+                Clicked="Button_Clicked"/>
+        </FlexLayout>
+    </VerticalStackLayout>
+</ContentPage>

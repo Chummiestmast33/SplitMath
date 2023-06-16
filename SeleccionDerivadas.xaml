@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SliptMath.SeleccionDerivadas"
+             Title="SeleccionDerivadas"
+             Shell.NavBarIsVisible="False"
+             BackgroundImageSource="fondo_aplicacion.jpeg">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="negro">#000</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <VerticalStackLayout
+        Padding="25,0"
+        Spacing="35"
+        VerticalOptions="Start">
+        <Label 
+            Text="Selecciona el tiempo"
+            FontFamily="CaveatBrush-Regular.ttf"
+            FontSize="37"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            Margin="0,75,0,0"
+            TextColor="{StaticResource negro}"/>
+        <Button
+            Margin="0,40,0,0"
+            Text="2 Minutos"
+            BackgroundColor="#6ADE6A"
+            BorderWidth="4"
+            BorderColor="{StaticResource negro}"
+            TextColor="{StaticResource negro}"
+            FontFamily="CaveatBrush-Regular.ttf"
+            FontSize="40"
+            CornerRadius="0"
+            Clicked="Opcion3Minutos"/>
+        <Button
+            Text="5 Minutos"
+            BackgroundColor="#2DA52D"
+            BorderWidth="4"
+            BorderColor="{StaticResource negro}"
+            TextColor="{StaticResource negro}"
+            FontFamily="CaveatBrush-Regular.ttf"
+            FontSize="40"
+            CornerRadius="0"
+            Clicked="Opcion5Minutos"/>
+        <Button
+            Text="10 Minutos"
+            BackgroundColor="#E7EB17"
+            BorderWidth="4"
+            BorderColor="{StaticResource negro}"
+            TextColor="{StaticResource negro}"
+            FontFamily="CaveatBrush-Regular.ttf"
+            FontSize="40"
+            CornerRadius="0"
+            Clicked="Opcion10Minutos"/>
+        <Button
+            Text="15 Minutos"
+            BackgroundColor="#EB8D3A"
+            BorderWidth="4"
+            BorderColor="{StaticResource negro}"
+            TextColor="{StaticResource negro}"
+            FontFamily="CaveatBrush-Regular.ttf"
+            FontSize="40"
+            CornerRadius="0"
+            Clicked="Opcion15Minutos"/>
+    </VerticalStackLayout>
+</ContentPage>

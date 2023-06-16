@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SliptMath.MenuModoDeJuego"
+             Title="MenuModoDeJuego"
+             BackgroundImageSource="fondo_aplicacion.jpeg"
+             Shell.NavBarIsVisible="False">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="negro">#000</Color>
+            <Color x:Key="white">#fff</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <VerticalStackLayout
+        Padding="30,30"
+        Spacing="25"
+        VerticalOptions="StartAndExpand">
+        <FlexLayout Direction="Row" JustifyContent="SpaceBetween" HeightRequest="50" Margin="0,20,0,0">
+            <ImageButton 
+            Source="bocinaactiva.png"
+            WidthRequest="50"
+            HeightRequest="50"
+            HorizontalOptions="End"
+            Clicked="CambiarReproduccionAudio"
+            x:Name="btnSonido"/>
+            <Button
+            Text="Regresar"
+            FontSize="15"
+            BackgroundColor="#FC6364"
+            Clicked="RegresarMenu"
+            TextColor="{x:StaticResource white}"/>
+        </FlexLayout>
+        <Label 
+            Text="Escoje un tema" 
+            HorizontalTextAlignment="Center"
+            FontSize="90"
+            FontFamily="CaveatBrush-Regular.ttf"
+                Margin="0,0,20,0"
+            TextColor="{StaticResource negro}"/>
+        <Button
+            Text="Derivadas"
+            FontSize="30"
+            BackgroundColor="#6B90F2"
+            FontFamily="IndieFlower-Regular.ttf"
+            TextColor="{StaticResource white}"
+            Margin="0,40,0,0"
+            x:Name="btnDerivadas"
+            BorderColor="{StaticResource negro}"
+            BorderWidth="3"
+            Clicked="ModoDerivadas"/>
+        <Label
+            Text="Proximamente!"
+            HorizontalTextAlignment="Center"
+            FontSize="30"
+            FontFamily="CaveatBrush-Regular.ttf"
+            TextColor="{StaticResource negro}"/>
+        <Button
+            Text="Factorizacion"
+            FontSize="30"
+            BackgroundColor="#FC6363"
+            TextColor="{StaticResource white}"
+            FontFamily="IndieFlower-Regular.ttf"
+            x:Name="btnFactorizacion"
+            BorderColor="{StaticResource negro}"
+            BorderWidth="3"
+            Opacity="0.7"/>
+
+    </VerticalStackLayout>
+</ContentPage>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SliptMath.MenuMejorPuntuacion"
+             Title="MenuMejorPuntuacion"
+             BackgroundImageSource="fondo_aplicacion.jpeg"
+             Shell.NavBarIsVisible="False">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="negro">#000</Color>
+            <Color x:Key="blanco">#fff</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <VerticalStackLayout
+        VerticalOptions="Center"
+        Padding="25,0"
+        Spacing="25">
+        <Label 
+            Text="TU MEJOR PUNTUACION 👑 :"
+            FontFamily="CaveatBrush-Regular.ttf"
+            FontSize="35"
+            TextColor="{StaticResource Yellow100Accent}"
+            HorizontalTextAlignment="Center"/>
+        <Label
+            Text="0"
+            x:Name="LbMejorPuntuacion"
+            FontFamily="CaveatBrush-Regular.ttf"
+            FontSize="50"
+            TextColor="{StaticResource negro}"
+            HorizontalTextAlignment="Center"/>
+        <Button
+            Text="Volver al menu"
+            HorizontalOptions="Center"
+            BackgroundColor="#FF2651"
+            TextColor="White"
+            FontFamily="CaveatBrush-Regular.ttf"
+            x:Name="btnVolverMenu"
+            FontSize="30"
+            Clicked="btnVolverMenu_Clicked"/>
+    </VerticalStackLayout>
+</ContentPage>

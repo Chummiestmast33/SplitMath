@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SliptMath.SeleccionTutorial"
+             Title="SeleccionTutorial"
+             Shell.NavBarIsVisible="False"
+             BackgroundImageSource="fondo_aplicacion.jpeg">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="negro">#000</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <VerticalStackLayout
+        VerticalOptions="Fill"
+        Padding="25,0"
+        Spacing="35">
+        <Label
+            Margin="0,75,0,0"
+            Text="Hola, sí esta es tu primera vez jugando splitmath te recomendamos que aprendas los básicos del juego en el tutorial si ya tienes experencia en el juego puedes omitirlo"
+            TextColor="{StaticResource negro}"
+            FontFamily="CaveatBrush-Regular.ttf"
+            FontSize="30"
+            BackgroundColor="#00F0F8FF"/>
+
+        <Button
+            Text="Hacer el tutorial"
+            FontSize="40"
+            FontFamily="CaveatBrush-Regular.ttf"
+            TextColor="{StaticResource negro}" 
+            BackgroundColor="#2AF718"
+            x:Name="btnTutorial"
+            BorderColor="{StaticResource negro}"
+            BorderWidth="4"/>
+        <Button
+            Text="Omitir tutorial"
+            FontSize="40"
+            FontFamily="CaveatBrush-Regular.ttf"
+            TextColor="{StaticResource White}" 
+            BackgroundColor="#F21C1C"
+            x:Name="btnNoTutorial"
+            BorderColor="{StaticResource negro}"
+            BorderWidth="4"
+            Clicked ="SaltarTutorial"/>
+        <FlexLayout Direction="Row" 
+                    HeightRequest="45"
+                    AlignContent="Center"
+                    AlignItems="Center"
+                    JustifyContent="Center"
+                    VerticalOptions="EndAndExpand"
+                    Margin="0,35,0,0">
+            <CheckBox
+            x:Name="NoMostrar"
+                Color="Red"
+                HeightRequest="30"
+                WidthRequest="30"
+                CheckedChanged="OnCheckBoxCheckedChanged" />
+            <Label
+                Text="No mostrar de nuevo"
+                Margin="5,0,0,0"
+                FontFamily="CaveatBrush-Regular.ttf"
+                FontSize="33"
+                TextColor="{StaticResource negro}"/>
+        </FlexLayout>
+    </VerticalStackLayout>
+</ContentPage>
